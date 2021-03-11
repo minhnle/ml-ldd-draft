@@ -21,7 +21,7 @@ LDD Steward: [enter steward node here]
 See the [LDD Update Process](https://pds-data-dictionaries.github.io/development/ldd-update.html)
 
 ## Implement
-blah
+
 
 To implement changes the LDD, simply update the IngestLDD under the `src/` directory, commit to a branch, push the branch to Github, and create a Pull Request. The [Github Action CI/CD](https://pds-data-dictionaries.github.io/development/ldd-build.html) will take care of the auto-generation of the schemas and schematrons.
 
