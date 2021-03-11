@@ -146,9 +146,33 @@
     <definition>The algorithm_name attribute specifies the name of the algorithm used.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Shortstring_</value_data_type>
+      <value_data_type>ASCII_Shortstring_Collapsed</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
+  
+  <!-- Attributes for the Data_Set_Preparation classes.   -->
+  
+  <DD_Attribute>
+    <name>data_preparation</name>
+    <version_id>1.0</version_id>
+    <local_identifier>data_preparation</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Minh Le</submitter_name>
+    <definition>The data_preparation attribute specifies whether a data set is labeled or not.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>yes</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>labeled</value>
+        <value_meaning>The data set is labeled for Supervised or Semi-Supervised Learning.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Unlabeled</value>
+        <value_meaning>The data set is not labeled.</value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
   
   <DD_Class>
     <name>Image_Data_Set</name>
@@ -270,13 +294,12 @@
     <element_flag>true</element_flag>
     <DD_Association>
       <identifier_reference>data_preparation</identifier_reference>
-      <reference_type></reference_type>
-      <minimum_occurrences></minimum_occurrences>
-      <maximum_occurrences></maximum_occurrences>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
   <DD_Class>
-    
     <name>Machine_Learning_Algorithm</name>
     <version_id>1.0</version_id>
     <local_identifier>Machine_Learning_Algorithm</local_identifier>
