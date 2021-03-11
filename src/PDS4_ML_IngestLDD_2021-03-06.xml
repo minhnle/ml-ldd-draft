@@ -13,6 +13,7 @@
   <namespace_id>example</namespace_id>
   <last_modification_date_time>2021-02-10T18:00:00Z</last_modification_date_time>
 
+  <!-- Attributes -->
   
   <!-- Attributes for the Image_Data_Set classes.   -->
   
@@ -173,7 +174,9 @@
     </DD_Value_Domain>
   </DD_Attribute>
   
+  <!-- Classes -->
   
+  <!-- Image_Data_Set Classes -->
   <DD_Class>
     <name>Image_Data_Set</name>
     <version_id>1.0</version_id>
@@ -285,6 +288,8 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+  
+  <!-- Data_Set_Preparation Class -->
   <DD_Class>
     <name>Data_Set_Preparation</name>
     <version_id>1.0</version_id>
@@ -299,12 +304,33 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+  
+  <!-- Machine_Learning_Algorithm Class -->
   <DD_Class>
     <name>Machine_Learning_Algorithm</name>
     <version_id>1.0</version_id>
     <local_identifier>Machine_Learning_Algorithm</local_identifier>
     <submitter_name>Minh Le</submitter_name>
     <definition>The Machine_Learning_Algorithm class is a container for classes and and attributes describing the algorithm type and learning style used.</definition>
+    <element_flag>true</element_flag>
+    <DD_Association>
+      <identifier_reference>algorithm_learning_style</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>algorithm_type</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>algorithm_name</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
   </DD_Class>
   
   
