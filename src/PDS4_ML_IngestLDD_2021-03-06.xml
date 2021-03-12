@@ -147,7 +147,7 @@
     <definition>The algorithm_name attribute specifies the name of the algorithm used.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Shortstring_Collapsed</value_data_type>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
   
@@ -161,7 +161,7 @@
     <submitter_name>Minh Le</submitter_name>
     <definition>The data_preparation attribute specifies whether a data set is labeled or not.</definition>
     <DD_Value_Domain>
-      <enumeration_flag>yes</enumeration_flag>
+      <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
         <value>labeled</value>
@@ -290,6 +290,7 @@
   </DD_Class>
   
   <!-- Data_Set_Preparation Class -->
+  
   <DD_Class>
     <name>Data_Set_Preparation</name>
     <version_id>1.0</version_id>
@@ -306,6 +307,7 @@
   </DD_Class>
   
   <!-- Machine_Learning_Algorithm Class -->
+  
   <DD_Class>
     <name>Machine_Learning_Algorithm</name>
     <version_id>1.0</version_id>
