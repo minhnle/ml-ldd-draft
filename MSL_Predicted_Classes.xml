@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:msn="http://pds.nasa.gov/pds4/msn/v1" xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1B10.xsd http://pds.nasa.gov/pds4/msn/v1 http://pds.nasa.gov/pds4/msn/v1/PDS4_MSN_1B00_1100.xsd">
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>MSL Predicted Class Set</title>
+        <information_model_version>1.14.0.0</information_model_version>
+        <product_class>Product_Observational</product_class>
+        <Citation_Information>
+            <publication_year>2020</publication_year>
+            <description>MSL Class Predictions generated from analysis of the MSL surface data set, version 2. The five columns in this file contain image file names, predicted class in integer representation, predicted class in string representation, predicted class probability, and version of the classifier that made the prediction.</description>
+        </Citation_Information>
+    </Identification_Area>
+    <Observation_Area>
+        <Investigation_Area>
+            <name>Mars Surface Data Class Predictions</name>
+            <type>Individual Investigation</type>
+            <Internal_Reference>
+                <lid_reference>urn:nasa:pds:context:investigation:</lid_reference>
+                <reference_type>data_to_investigation</reference_type>
+            </Internal_Reference>
+            <Internal_Reference>
+                <lid_reference>urn:nasa:pds:context:investigation:mission.mars_science_laboratory::1.0</lid_reference>
+                <reference_type>data_to_raw_source_product</reference_type>
+                <comment>The MSL Class Predictions were generated from analysis of MSL surface data, specifically, surface images from Mastcam and MAHLI.</comment>
+            </Internal_Reference>
+        </Investigation_Area>
+        <Observing_System>
+            <Observing_System_Component>
+                <name>Mast Camera</name>
+                <type>Camera</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:msl.mastcam</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Mars Hand Lens Imager Camera</name>
+                <type>Imager</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:mahli.msl</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Curiosity Rover</name>
+                <type>Rover</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument_host:rover.msl</lid_reference>
+                    <reference_type>is_instrument_host</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+        </Observing_System>
+        <Target_Identification>
+            <name>Mars</name>
+            <type>Planet</type>
+            <Internal_Reference>
+                <lid_reference>urn:nasa:pds:context:target:planet.mars</lid_reference>
+                <reference_type>data_to_target</reference_type>
+            </Internal_Reference>
+        </Target_Identification>
+    </Observation_Area>
+        <File_Area_Observational>
+            <File>
+                <file_name>mslarchive_20200728.csv</file_name>
+                <creation_date_time>2020-10-20T15:02:00.000Z</creation_date_time>
+            </File>
+            <Table_Delimited>
+                <name>MSL Surface Data Class Predictions</name>
+                <local_identifier>TABLE</local_identifier>
+                <offset unit="byte">0</offset>
+                <parsing_standard_id>PDS DSV 1</parsing_standard_id>
+                <records>136967</records>
+                <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+                <field_delimiter>Comma</field_delimiter>
+                <Record_Delimited>
+                    <fields>5</fields>
+                    <groups>0</groups>
+                    <Field_Delimited>
+                        <data_type>ASCII_File_Name</data_type>
+                        <description>This field contains image file names from the Mars Surface Data Set.</description>
+                    </Field_Delimited>
+                    <Field_Delimited>
+                        <data_type>ASCII_NonNegative_Integer</data_type>
+                        <description>This field contains the associated predicted class of an image file in integer form.</description>
+                    </Field_Delimited>
+                    <Field_Delimted>
+                        <data_type>ASCII_String</data_type>
+                        <description>This field contains the associated predicted class of an image file in string representation.</description>
+                    </Field_Delimted>
+                    <Field_Delimited>
+                        <data_type>ASCII_Real</data_type>
+                        <description>This field contains the predicted probability for classes.</description>
+                    </Field_Delimited>
+                    <Field_Delimited>
+                        <data_type>ASCII_String</data_type>
+                        <description>This field contains the version number of the classifier used to predict the class.</description>
+                    </Field_Delimited>
+                </Record_Delimited>
+            </Table_Delimited>
+        </File_Area_Observational>
+</Product_Observational>
+            
