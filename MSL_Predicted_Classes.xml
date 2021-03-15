@@ -77,22 +77,27 @@
                     <fields>5</fields>
                     <groups>0</groups>
                     <Field_Delimited>
+                        <name></name>
                         <data_type>ASCII_File_Name</data_type>
                         <description>This field contains image file names from the Mars Surface Data Set.</description>
                     </Field_Delimited>
                     <Field_Delimited>
+                        <name></name>
                         <data_type>ASCII_NonNegative_Integer</data_type>
                         <description>This field contains the associated predicted class of an image file in integer form.</description>
                     </Field_Delimited>
                     <Field_Delimted>
+                        <name></name>
                         <data_type>ASCII_String</data_type>
                         <description>This field contains the associated predicted class of an image file in string representation.</description>
                     </Field_Delimted>
                     <Field_Delimited>
+                        <name></name>
                         <data_type>ASCII_Real</data_type>
                         <description>This field contains the predicted probability for classes.</description>
                     </Field_Delimited>
                     <Field_Delimited>
+                        <name></name>
                         <data_type>ASCII_String</data_type>
                         <description>This field contains the version number of the classifier used to predict the class.</description>
                     </Field_Delimited>
