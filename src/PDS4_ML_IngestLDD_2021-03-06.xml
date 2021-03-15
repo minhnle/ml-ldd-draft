@@ -228,7 +228,6 @@
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-    <element_flag>true</element_flag>
     <DD_Association>
       <identifier_reference>test_set_version_id</identifier_reference>
       <reference_type>attribute_of</reference_type>
