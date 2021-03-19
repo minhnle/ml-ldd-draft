@@ -1,8 +1,8 @@
 # {LDD Name} Local Data Dictionary (LDD)
 
-The {LDD Name} dictionary [enter description here]
+The Machine Learning dictionary contains classes and attributes that describe the process of machine learning image classification.
 
-LDD Steward: [enter steward node here]
+LDD Steward: IMG Node
 
 ## Releases
 
