@@ -39,7 +39,7 @@
     <definition>The test_set_version_id attribute specifies the test set version number used to test the machine learning model.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_String</value_data_type>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -65,7 +65,7 @@
     <definition>The training_set_version_id attribute specifies the training set version number used to train the machine learning model.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_String</value_data_type>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -91,7 +91,7 @@
     <definition>The validation_set_version_id attribute specifies the validation set version number used to validate the machine learning model.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_String</value_data_type>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -164,7 +164,7 @@
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
-        <value>labeled</value>
+        <value>Labeled</value>
         <value_meaning>The data set is labeled for Supervised or Semi-Supervised Learning.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
@@ -191,6 +191,18 @@
         <value>Labeling Tool</value>
         <value_meaning>A software tool was employed to assist with dataset labeling.</value_meaning>
       </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>labeling_tool_name</name>
+    <version_id>1.0</version_id>
+    <local_identifier>labeling_tool_name</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Minh Le</submitter_name>
+    <definition>The labeling_tool_name attribute specifies the name of the software tool used to assist in labeling a dataset.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -342,8 +354,14 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
+      <identifier_reference>labeling_tool_name</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>0</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
       <identifier_reference>science_platform_name</identifier_reference>
-      <reference_type>1.0</reference_type>
+      <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
