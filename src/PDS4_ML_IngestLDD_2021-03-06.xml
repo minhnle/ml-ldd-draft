@@ -173,6 +173,38 @@
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
+  <DD_Attribute>
+    <name>labeling_technique</name>
+    <version_id>1.0</version_id>
+    <local_identifier>labeling_technique</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Minh Le</submitter_name>
+    <definition>This attribute specifies the technique deployed for data set labeling (e.g. crowd-sourced volunteers, labeling tool, etc.).</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Crowd-Sourced Labeling</value>
+        <value_meaning>Volunteers were crowdsourced for dataset labeling needs.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Labeling Tool</value>
+        <value_meaning>A software tool was employed to assist with dataset labeling.</value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>science_platform_name</name>
+    <version_id>1.0</version_id>
+    <local_identifier>science_platform_name</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Minh Le</submitter_name>
+    <definition>The science_platform_name attribute provides the name of the platform used to recruit volunteers for data labeling (e.g. Zooniverse.org).</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
   
   <!-- Classes -->
   
@@ -300,6 +332,18 @@
     <DD_Association>
       <identifier_reference>data_preparation</identifier_reference>
       <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>labeling_technique</identifier_reference>
+      <reference_type><1.0/reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>science_platform_name</identifier_reference>
+      <reference_type>1.0</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
